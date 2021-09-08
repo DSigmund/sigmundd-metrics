@@ -1,0 +1,10 @@
+src/
+docs/
+examples/
+.gitlab-ci.yml
+.npmrc
+.eslintrc.json        
+jest.config.js        
+stryker.conf.json     
+tsconfig-examples.json
+tsconfig.json         

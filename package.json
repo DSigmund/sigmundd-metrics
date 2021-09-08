@@ -1,0 +1,63 @@
+{
+  "name": "sigmundd-metrics",
+  "version": "1.2.1",
+  "description": "A small express middleware to get base metrics for any node.js app",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "test": "jest",
+    "test:mutation": "stryker run",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint --fix src/**/*.ts",
+    "check": "npm audit && npm outdated",
+    "build": "tsc",
+    "build:examples": "tsc --project tsconfig-examples.json"
+  },
+  "keywords": [
+    "metrics",
+    "prometheus"
+  ],
+  "author": "Dominik Sigmund <dominik.sigmund@webdad.eu>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DSigmund/sigmundd-metrics.git"
+  },
+  "license": "Unlicense",
+  "dependencies": {
+    "express": "^4.17.1",
+    "prom-client": "^12.0.0"
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "^3.2.4",
+    "@stryker-mutator/jest-runner": "^3.2.4",
+    "@stryker-mutator/typescript": "^3.2.4",
+    "@types/express": "^4.17.6",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.13",
+    "@types/superagent": "^4.1.7",
+    "@types/supertest": "^2.0.9",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "eslint": "^7.2.0",
+    "eslint-config-standard-with-typescript": "^18.0.2",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-tsdoc": "^0.2.5",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "jest-html-reporters": "^1.2.1",
+    "mock-express-request": "^0.2.2",
+    "standard": "^14.3.4",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  }
+}

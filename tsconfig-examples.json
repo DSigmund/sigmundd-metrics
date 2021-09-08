@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target":"ES6",
+    "module": "commonjs",
+    "lib": ["es2017"],
+    "strict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./examples/dist/",
+    "rootDir": "./examples/src/",
+    "resolveJsonModule": true,
+    "watch": false
+  },
+  "exclude": [
+    "node_modules",
+    "./examples/dist/",
+    "./src",
+    "./dist"
+  ]
+}
